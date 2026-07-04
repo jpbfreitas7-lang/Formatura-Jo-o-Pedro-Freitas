@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Central de Mensagens · Formatura</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#f4efe6;--paper:#fbf8f2;--gold:#9a7b4f;--gold2:#b9985f;
+    --ink:#33302b;--muted:#7d766a;--line:#e2d8c6;--wa:#25a366;--wa2:#1f8f57}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'EB Garamond',Georgia,serif;color:var(--ink);
+    background:var(--cream);padding:16px 12px 60px}
+  .wrap{max-width:680px;margin:0 auto}
+  h1{font-family:'Cormorant Garamond';font-weight:700;font-size:28px;text-align:center;margin:6px 0 2px}
+  .subt{text-align:center;color:var(--muted);font-size:14px;margin:0 0 18px;font-style:italic}
+  .panel{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:16px}
+  .panel h2{font-family:'Cormorant Garamond';font-size:19px;margin:0 0 4px;color:var(--gold)}
+  label.f{display:block;font-size:13px;color:var(--muted);margin:10px 0 4px;font-weight:500}
+  input.t{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:9px;
+    font-family:'EB Garamond';font-size:15px;color:var(--ink);background:#fff}
+  input.t:focus{outline:2px solid var(--gold2);border-color:var(--gold2)}
+  .warn{background:#fdf6e7;border:1px solid #e9d9a8;color:#8a6d1e;border-radius:9px;
+    padding:9px 11px;font-size:13px;margin-top:10px}
+  .steps{font-size:13.5px;color:var(--muted);line-height:1.55;margin:8px 0 0;padding-left:18px}
+  .steps a{color:var(--gold);font-weight:600}
+  .count{text-align:center;color:var(--muted);font-size:13px;margin:2px 0 12px}
+  .search{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;
+    font-family:'EB Garamond';font-size:15px;margin-bottom:14px;background:#fff}
+  .rc{background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:13px 14px;margin-bottom:12px}
+  .rh{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:9px}
+  .num{width:26px;height:26px;border-radius:50%;background:var(--gold);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:12px;flex:none}
+  .rn{font-family:'Cormorant Garamond';font-weight:700;font-size:19px;flex:1;min-width:120px}
+  .badges{display:flex;gap:5px;flex-wrap:wrap}
+  .bdg{font-size:10.5px;letter-spacing:.04em;padding:3px 8px;border-radius:20px;color:#fff;font-weight:600}
+  .b-c{background:#1D4ED8}.b-q{background:#7C3AED}.b-b{background:#B45309}.b-f{background:#15803D}
+  .saudrow{display:flex;align-items:center;gap:8px;margin-bottom:9px}
+  .saudrow span{font-size:13px;color:var(--muted);flex:none}
+  .saudrow input{flex:1;padding:8px 10px;border:1px solid var(--line);border-radius:8px;
+    font-family:'EB Garamond';font-size:14.5px;background:#fff}
+  textarea{width:100%;min-height:150px;padding:12px;border:1px solid var(--line);border-radius:10px;
+    font-family:'EB Garamond';font-size:14px;line-height:1.5;color:var(--ink);background:#fff;resize:vertical}
+  .btns{display:flex;gap:8px;margin-top:9px;flex-wrap:wrap}
+  .btn{flex:1;min-width:130px;padding:12px;border:0;border-radius:10px;cursor:pointer;
+    font-family:'EB Garamond';font-weight:600;font-size:14.5px;transition:.15s}
+  .btn:active{transform:translateY(1px)}
+  .btn-msg{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#fff}
+  .btn-wa{background:linear-gradient(135deg,var(--wa),var(--wa2));color:#fff}
+  .btn.ok{background:#dff3e6 !important;color:#1f8f57 !important;box-shadow:inset 0 0 0 1px #9ad9b5}
+  details{margin-top:6px}
+  summary{cursor:pointer;color:var(--gold);font-weight:600;font-size:14px;padding:6px 0}
+  .reflist{font-size:13.5px;color:var(--muted);line-height:1.7;columns:2;column-gap:18px}
+  @media(max-width:520px){.reflist{columns:1}}
+  del{color:#b06}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Central de Mensagens</h1>
+  <p class="subt">Convites de WhatsApp · Formatura de João Pedro</p>
+
+  <div class="panel">
+    <h2>1. Publique a página de confirmação</h2>
+    <ol class="steps">
+      <li>Abra <a href="https://app.netlify.com/drop" target="_blank">app.netlify.com/drop</a> e <b>arraste o arquivo <code>confirmar-presenca.html</code></b> para a página (grátis, sem cadastro obrigatório).</li>
+      <li>Antes disso, abra o arquivo uma vez e coloque <b>seu número de WhatsApp</b> na linha indicada (JOAO_WHATSAPP), para receber as confirmações.</li>
+      <li>O Netlify te dará um endereço, ex.: <code>https://algo-aleatorio.netlify.app</code>. Cole-o abaixo.</li>
+    </ol>
+    <label class="f">Endereço (URL) da página publicada</label>
+    <input class="t" id="base" placeholder="https://sua-pagina.netlify.app" oninput="render()">
+    <div class="warn" id="baseWarn">Cole o endereço acima para gerar os links dentro das mensagens.</div>
+  </div>
+
+  <div class="panel">
+    <h2>2. Envie as mensagens (uma por convidado)</h2>
+    <p class="steps" style="list-style:none;padding-left:0">Toque em <b>Copiar mensagem</b>, cole no WhatsApp da pessoa e anexe sua imagem de formatura. Ou use <b>Abrir no WhatsApp</b> se você tiver o contato salvo. O nome de tratamento é editável.</p>
+  </div>
+
+  <input class="search" id="search" placeholder="🔎 Buscar convidado..." oninput="render()">
+  <div class="count" id="count"></div>
+  <div id="list"></div>
+
+  <div class="panel">
+    <details>
+      <summary>Quem NÃO recebe esta mensagem (riscados no seu print)</summary>
+      <div class="reflist" id="crossed"></div>
+    </details>
+    <details>
+      <summary>Convidados de outros eventos (não é o churrasco) — sem mensagem aqui</summary>
+      <div class="reflist" id="other"></div>
+      <p style="font-size:12.5px;color:#7d766a;font-style:italic;margin:8px 0 0">Se quiser, peço ao João para eu escrever mensagens específicas para estes, com os dados da Colação / Coquetel / Baile.</p>
+    </details>
+  </div>
+</div>
+
+<script>
+const R=[{"nome": "Renata", "saud": "Renata", "ev": "cqbf"}, {"nome": "João Francisco", "saud": "João Francisco", "ev": "cqbf"}, {"nome": "Beatriz", "saud": "Beatriz", "ev": "cqbf"}, {"nome": "Vó Lurdinha", "saud": "Vó Lurdinha", "ev": "cf"}, {"nome": "Vô Juscelino", "saud": "Vô Juscelino", "ev": "cqbf"}, {"nome": "Clarinha", "saud": "Clarinha", "ev": "cqbf"}, {"nome": "Gustavo", "saud": "Gustavo", "ev": "cbf"}, {"nome": "Rogérinho", "saud": "Rogérinho", "ev": "cbf"}, {"nome": "Tia Camila", "saud": "Tia Camila", "ev": "cqbf"}, {"nome": "Tio Gui", "saud": "Tio Gui", "ev": "cqbf"}, {"nome": "Júlia (Julinha)", "saud": "Júlia", "ev": "cbf"}, {"nome": "Pedro", "saud": "Pedro", "ev": "cbf"}, {"nome": "Tia Flávia", "saud": "Tia Flávia", "ev": "f"}, {"nome": "Tio Pietro", "saud": "Tio Pietro", "ev": "f"}, {"nome": "Ana Júlia", "saud": "Ana Júlia", "ev": "f"}, {"nome": "Professor Daniel", "saud": "Professor Daniel", "ev": "f"}, {"nome": "Professor Capitão", "saud": "Professor Capitão", "ev": "f"}, {"nome": "Mãe da Marina", "saud": "Mãe da Marina", "ev": "f"}, {"nome": "Pai da Marina", "saud": "Pai da Marina", "ev": "f"}, {"nome": "Marina", "saud": "Marina", "ev": "f"}, {"nome": "Gabizinha", "saud": "Gabizinha", "ev": "f"}, {"nome": "Marcinho", "saud": "Marcinho", "ev": "f"}, {"nome": "Djalma", "saud": "Djalma", "ev": "bf"}, {"nome": "Mãe do Djalma", "saud": "Mãe do Djalma", "ev": "f"}, {"nome": "Pai do Djalma", "saud": "Pai do Djalma", "ev": "f"}, {"nome": "Irmã do Djalma", "saud": "Irmã do Djalma", "ev": "f"}, {"nome": "Dona Élia", "saud": "Dona Élia", "ev": "f"}, {"nome": "Márcio (filho da Élia)", "saud": "Márcio", "ev": "f"}, {"nome": "Goreti", "saud": "Goreti", "ev": "f"}, {"nome": "Rosana", "saud": "Rosana", "ev": "f"}, {"nome": "Vinícius (marido da Franceska)", "saud": "Vinícius", "ev": "f"}, {"nome": "Franceska", "saud": "Franceska", "ev": "f"}, {"nome": "Tia Gleice", "saud": "Tia Gleice", "ev": "f"}, {"nome": "Tio Júnior", "saud": "Tio Júnior", "ev": "f"}, {"nome": "Marco Aurélio", "saud": "Marco Aurélio", "ev": "f"}, {"nome": "Elisângela", "saud": "Elisângela", "ev": "f"}, {"nome": "Queila", "saud": "Queila", "ev": "f"}, {"nome": "Luquinhas", "saud": "Luquinhas", "ev": "f"}, {"nome": "Tia Vanuza", "saud": "Tia Vanuza", "ev": "f"}, {"nome": "Paolo", "saud": "Paolo", "ev": "f"}, {"nome": "Marina (filha do Paolo)", "saud": "Marina", "ev": "f"}, {"nome": "Zé Victor", "saud": "Zé Victor", "ev": "bf"}, {"nome": "Pedro Ivo", "saud": "Pedro Ivo", "ev": "f"}, {"nome": "Vilmar", "saud": "Vilmar", "ev": "f"}, {"nome": "Elenita (esposa do Vilmar)", "saud": "Elenita", "ev": "f"}, {"nome": "André Mendes", "saud": "André Mendes", "ev": "f"}, {"nome": "Júlio Gontijo", "saud": "Júlio Gontijo", "ev": "f"}, {"nome": "Miriam (Bernoulli)", "saud": "Miriam", "ev": "f"}, {"nome": "Eber (Bernoulli)", "saud": "Eber", "ev": "f"}, {"nome": "Seu Sérgio", "saud": "Seu Sérgio", "ev": "f"}, {"nome": "Paulo Roberto", "saud": "Paulo Roberto", "ev": "f"}, {"nome": "Welder", "saud": "Welder", "ev": "f"}];
+const CROSSED=["João Pedro (eu)", "Laura", "Esposa do Daniel", "Namorado da Marina", "Esposa do Marcinho", "Bruna", "Marido da Goreti", "Marido da Rosana", "Filha 1", "Filha 2", "Esposa do Marco Aurélio", "Marido da Elisângela", "Marido da Queila", "Esposa do Paolo", "Marido da Marina (filha do Paolo)", "Esposa do Pedro Ivo", "Esposa do André Mendes", "Esposa do Júlio Gontijo", "Esposa do Seu Sérgio", "Esposa do Welder", "Tia Jane", "Daniel", "Namorada do André Amaral", "Mãe (convite pago)", "Amiga da mãe", "Tio Cris"];
+const OTHER=["Pai (só Colação)", "Mãe (só Colação)", "Vô Cleber (só Colação)", "Tia Dani (Colação, Coquetel, Baile)", "André Amaral (Coquetel, Baile)"];
+const EVN={c:"Colação",q:"Coquetel",b:"Baile",f:"Churrasco"};
+const saud={}; // guarda saudação editada por índice
+
+function msgFor(i){
+  const r=R[i];
+  const nome=(saud[i]!==undefined?saud[i]:r.saud).trim()||r.saud;
+  const base=document.getElementById("base").value.trim().replace(/\/+$/,"");
+  const link= base? `${base}/?c=${encodeURIComponent(nome)}&ev=${r.ev}` : "[publique a página e cole o endereço acima]";
+  const multi = /[cqb]/.test(r.ev);
+  const extra = multi? "\n✨ Você também está convidado(a) para outros momentos da minha formatura — veja todos e confirme no link abaixo.\n" : "";
+  return `Olá, ${nome}! 💛
+
+*Convite de Formatura*
+
+Com muita alegria, venho convidar você para celebrar comigo a minha formatura em Medicina.
+
+Depois de tantos anos de dedicação, renúncias, desafios e aprendizados, chegou o momento de agradecer a Deus por cada passo dessa caminhada e compartilhar essa conquista com pessoas especiais que fizeram parte da minha história.
+
+Será uma grande alegria ter você comigo nesse dia tão significativo!
+
+📍 Local: Fazenda Lumiar — Barbacena
+📅 Data: 11/07
+⏰ Horário: das 13h00 às 18h00
+${extra}
+✅ *Confirme sua presença aqui:*
+${link}
+
+Sua presença tornará esse momento ainda mais especial. Será uma honra comemorar essa conquista ao seu lado!
+
+Com carinho,
+João Pedro Freitas`;
+}
+
+function render(){
+  const base=document.getElementById("base").value.trim();
+  document.getElementById("baseWarn").style.display = base? "none":"block";
+  const q=(document.getElementById("search").value||"").toLowerCase();
+  const list=document.getElementById("list"); list.innerHTML="";
+  let shown=0;
+  R.forEach((r,i)=>{
+    const nm=(saud[i]!==undefined?saud[i]:r.saud);
+    if(q && !(r.nome.toLowerCase().includes(q)||nm.toLowerCase().includes(q))) return;
+    shown++;
+    const badges=r.ev.split("").map(k=>`<span class="bdg b-${k}">${EVN[k]}</span>`).join("");
+    const card=document.createElement("div"); card.className="rc";
+    card.innerHTML=`
+      <div class="rh"><span class="num">${i+1}</span><span class="rn">${r.nome}</span>
+        <span class="badges">${badges}</span></div>
+      <div class="saudrow"><span>Tratar por:</span>
+        <input value="${(saud[i]!==undefined?saud[i]:r.saud).replace(/"/g,'&quot;')}"
+          oninput="saud[${i}]=this.value; upd(${i})"></div>
+      <textarea id="ta_${i}" readonly>${msgFor(i)}</textarea>
+      <div class="btns">
+        <button class="btn btn-msg" id="cm_${i}" onclick="copyMsg(${i})">📋 Copiar mensagem</button>
+        <button class="btn btn-wa" onclick="openWa(${i})">Abrir no WhatsApp</button>
+      </div>`;
+    list.appendChild(card);
+  });
+  document.getElementById("count").textContent=`${shown} de ${R.length} convidados`;
+}
+function upd(i){const ta=document.getElementById("ta_"+i); if(ta) ta.value=msgFor(i);}
+function copyMsg(i){
+  const t=msgFor(i);
+  navigator.clipboard.writeText(t).then(()=>{
+    const b=document.getElementById("cm_"+i); const o=b.textContent;
+    b.textContent="✓ Copiado!"; b.classList.add("ok");
+    setTimeout(()=>{b.textContent=o;b.classList.remove("ok");},1600);
+  }).catch(()=>{const ta=document.getElementById("ta_"+i);ta.removeAttribute("readonly");ta.select();document.execCommand("copy");ta.setAttribute("readonly","");});
+}
+function openWa(i){
+  const t=encodeURIComponent(msgFor(i));
+  window.open(`https://wa.me/?text=${t}`,"_blank");
+}
+document.getElementById("crossed").innerHTML=CROSSED.map(n=>`<div><del>${n}</del></div>`).join("");
+document.getElementById("other").innerHTML=OTHER.map(n=>`<div>• ${n}</div>`).join("");
+render();
+</script>
+</body>
+</html>
